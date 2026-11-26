@@ -30,3 +30,8 @@ Testing URLs
 
 - http://localhost:8080/calculator/rest/hello?name=thws
 - http://localhost:8080/calculator/rest/calc
+
+Build and run with Docker
+
+    docker build -t calculator:v1 .
+    docker run -it --rm -p 8080:8080 calculator:v1
