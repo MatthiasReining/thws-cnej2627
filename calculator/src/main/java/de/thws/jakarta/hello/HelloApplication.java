@@ -1,4 +1,4 @@
-package de.thws.hello;
+package de.thws.jakarta.hello;
 
 import jakarta.ws.rs.core.Application;
 import jakarta.ws.rs.ApplicationPath;

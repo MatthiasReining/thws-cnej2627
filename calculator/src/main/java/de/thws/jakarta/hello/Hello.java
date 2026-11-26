@@ -1,4 +1,4 @@
-package de.thws.hello;
+package de.thws.jakarta.hello;
 
 public class Hello {
 
@@ -8,7 +8,7 @@ public class Hello {
         this.name = name;
     }
 
-    public String getHello() {
+    public String getHello(){
         return name;
     }
 }
