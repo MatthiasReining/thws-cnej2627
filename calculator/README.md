@@ -35,3 +35,35 @@ Build and run with Docker
 
     docker build -t calculator:v1 .
     docker run -it --rm -p 8080:8080 calculator:v1
+
+# Hosting
+
+## Registration at AWS
+
+- Create AWS account
+- Create AWS ECR (Container Registry)
+
+Commands for bulding and pushing (example URLs)
+
+```shell
+mvnw clean package
+docker build -t thws/calculator:v4 .
+docker tag thws/calculator:v4 227331280130.dkr.ecr.eu-north-1.amazonaws.com/thws/calculator:v4
+docker push 227331280130.dkr.ecr.eu-north-1.amazonaws.com/thws/calculator:v4
+```
+
+## Hetzner
+
+https://www.hetzner.com
+
+- Create account
+- Create instance (e.g. cpx22) (e.g. ubuntu)
+- Server hardening
+
+Setup
+
+- Install docker (https://docs.docker.com/engine/install/ubuntu/)
+- Install AWS CLI
+- Login to AWS
+- Push & run App:  
+  `docker run -d --name calculator --restart unless-stopped -p 8080:8080   227331280130.dkr.ecr.eu-north-1.amazonaws.com/thws/calculator:v4`
